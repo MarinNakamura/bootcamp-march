@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Forms</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <!-- action is WHERE your data will be taken to when the user clicks submit -->
+  <!-- method is HOW your data will be taken to your action -->
+  <form action="" method="">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required placeholder="@username"> <!-- text input -->
+    <!-- NOTE: make sure to add name and id to input elements -->
+    <!-- for attribute in labe and id attribute in input should be the same. -->
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required placeholder="your password here"> <!-- password input -->
+    <!-- Input fields shoud not be empty if it has required attribute -->
+    <!-- placeholder displays a hint/instruction/sample value that the user could enter in the input field -->
+
+    <!-- submit button -->
+    <!-- option 1 -->
+    <input type="submit" value="Login" name="btn_login">
+    <!-- value becomes the display text of the button. No need for an ID, only name. -->
+
+    
+  </form>
+
+  <hr>
+  <h1>Other Details</h1>
+  <form action="" method="">
+    <label for="age">Age</label>
+    <!-- number input -->
+    <input type="number" name="age" id="age" min="18" max="80">
+    <!-- 
+      FORM VALIDATORS
+      -it checks the user input
+    
+      min - sets the minimum value your number input could accept
+      max - sets the maximum value your number input could accept
+
+      required is also a form validator
+    -->
+    <br><br>
+    <label for="birthday">Birthday</label>
+    <!-- date input -->
+    <input type="date" name="birthday" id="birthday">
+
+    <br><br>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email"> <!-- email input -->
+
+    <br><br>
+    <label for="bio">Enter Bio / Description</label>
+    <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+
+    <br><br>
+    <label for="gender">Gender</label>
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female</label>
+    <!-- to group radio buttons, it should have the same name. Also, each radio button will have a value attribute and its value is different from each other -->
+    <br><br>
+    <label for="hobby">Select your hobby/ies:</label>
+    <input type="checkbox" name="hobby" id="hiking" value="hiking">
+    <label for="hiking">Hiking</label>
+
+    <input type="checkbox" name="hobby" id="baking" value="baking">
+    <label for="baking">Baking</label>
+
+    <input type="checkbox" name="hobby" id="fishing" value="fishing">
+    <label for="fishing">Fishing</label>
+
+    <br><br>
+    <label for="device">Select a device:</label>
+    <!-- Dropdown list box -->
+    <select name="device" id="device">
+      <option value="mobile">Mobile Phone</option>
+      <option value="tablet">Tablet Device</option>
+      <option value="laptop">Laptop Computer</option>
+      <option value="desktop">Desktoop Computer</option>
+    </select>
+
+    <br><br>
+    <label for="device">Select a device:</label>
+    <!-- multiple select box -->
+    <select name="device" id="device" multiple>
+      <option value="mobile">Mobile Phone</option>
+      <option value="tablet">Tablet Device</option>
+      <option value="laptop">Laptop Computer</option>
+      <option value="desktop">Desktoop Computer</option>
+    </select>
+
+    <br><br>
+    <label for="profile-photo">Profile Phote</label>
+    <input type="file" name="profile_photo" id="profile-photo">
+
+    <br><br>
+    <!-- submit button -->
+    <!-- option 2 -->
+    <button type="submit" name="btn_update">Update</button>
+  </form>
+</body>
+</html>
